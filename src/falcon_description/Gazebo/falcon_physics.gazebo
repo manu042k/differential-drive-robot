@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<robot name="falcon" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="standard_friction" value="1.0" />
+<xacro:property name="wheels_friction" value="1.0" />
+<xacro:property name="caster_friction" value="1.0" />
+
+
+<gazebo reference="base_link">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="sd2_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="sd4_1">
+ 
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="sd3_1">
+ 
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="sd1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="upper_plate_1">
+ 
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Arduino_uno.6df525b0-a0fc-4683-8e1a-4d70c617ad71_v1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="wheels_v2_1">
+  
+  <mu1>${wheels_friction}</mu1>
+  <mu2>${wheels_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="wheels_v2_2">
+  
+  <mu1>${wheels_friction}</mu1>
+  <mu2>${wheels_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_left_v1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_right_v1_v1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Raspberry-Pi-4-Model-B-03_v1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="l298n__v12_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="power_bank.f96af03a-0fb2-4191-ac78-a015be66eb68_v2_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="MODULO_XL4016_v1_1">
+ 
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="Kinect_v8_1">
+ 
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="GY-91_MPU9250+BMP280_-_Pins_Down__1__v1_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_2">
+ 
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+</robot>

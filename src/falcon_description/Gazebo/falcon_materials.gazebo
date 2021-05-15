@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<robot name="falcon" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Black" />
+<xacro:property name="green_color" value="Gazebo/Green" />
+<xacro:property name="yellow_color" value="Gazebo/DarkYellow" />
+<xacro:property name="red_color" value="Gazebo/Red" />
+<xacro:property name="blue_color" value="Gazebo/BlueBlue" />
+
+
+
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  
+</gazebo>
+
+<gazebo reference="sd2_1">
+  <material>${yellow_color}</material>
+  
+</gazebo>
+
+<gazebo reference="sd4_1">
+  <material>${yellow_color}</material>
+  
+</gazebo>
+
+<gazebo reference="sd3_1">
+  <material>${yellow_color}</material>
+  
+</gazebo>
+
+<gazebo reference="sd1_1">
+  <material>${yellow_color}</material>
+  
+</gazebo>
+
+<gazebo reference="upper_plate_1">
+  <material>${body_color}</material>
+  
+</gazebo>
+
+<gazebo reference="Arduino_uno.6df525b0-a0fc-4683-8e1a-4d70c617ad71_v1_1">
+  <material>${blue_color}</material>
+ 
+</gazebo>
+
+<gazebo reference="wheels_v2_1">
+  <material>${body_color}</material>
+  
+</gazebo>
+
+<gazebo reference="wheels_v2_2">
+  <material>${body_color}</material>
+ 
+</gazebo>
+
+<gazebo reference="motor_left_v1_1">
+  <material>${yellow_color}</material>
+  
+</gazebo>
+
+<gazebo reference="motor_right_v1_v1_1">
+  <material>${yellow_color}</material>
+ 
+</gazebo>
+
+<gazebo reference="Raspberry-Pi-4-Model-B-03_v1_1">
+  <material>${green_color}</material>
+ 
+</gazebo>
+
+<gazebo reference="l298n__v12_1">
+  <material>${red_color}</material>
+  
+</gazebo>
+
+<gazebo reference="power_bank.f96af03a-0fb2-4191-ac78-a015be66eb68_v2_1">
+  <material>${green_color}</material>
+  
+</gazebo>
+
+<gazebo reference="MODULO_XL4016_v1_1">
+  <material>${green_color}</material>
+  
+</gazebo>
+
+<gazebo reference="Kinect_v8_1">
+  <material>${body_color}</material>
+  
+</gazebo>
+
+<gazebo reference="GY-91_MPU9250+BMP280_-_Pins_Down__1__v1_1">
+  <material>${green_color}</material>
+ 
+</gazebo>
+
+<gazebo reference="caster_2">
+  <material>${body_color}</material>
+  
+</gazebo>
+
+</robot>
