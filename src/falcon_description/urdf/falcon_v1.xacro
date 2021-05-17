@@ -6,7 +6,7 @@
 <xacro:include filename="$(find falcon_description)/Gazebo/falcon_plugins.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="-9.58975367215327e-16 -2.6593643350619826e-17 0.05230314967854301"/>
+    <origin rpy="0 0 0" xyz="-9.58975367215327e-16 2.6593643350619826e-17 0.05230314967854301"/>
     <mass value="0.402909257822891"/>
     <inertia ixx="0.002267" ixy="0.0" ixz="-0.0" iyy="0.002267" iyz="0.0" izz="0.004533"/>
   </inertial>
@@ -319,7 +319,7 @@
   </collision>
 </link>
 
-<link name="Kinect_v8_1">
+<!-- link name="Kinect_v8_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0026084701317663286 -0.054732935924941044 0.04806530798986494"/>
     <mass value="9.558158507460131"/>
@@ -338,7 +338,29 @@
       <mesh filename="package://falcon_description/meshes/Kinect_v8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
+</link -->
+<link name="depth_camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01 0.0 0.01"/>
+    <mass value="0.1256"/>
+    <inertia ixx="2.1e-05" ixy="0.0" ixz="0.0" iyy="8e-06" iyz="0.0" izz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://falcon_description/meshes/Kinect_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://falcon_description/meshes/Kinect_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
 </link>
+
+
 
 <link name="GY-91_MPU9250+BMP280_-_Pins_Down__1__v1_1">
   <inertial>
@@ -468,10 +490,15 @@
   <child link="MODULO_XL4016_v1_1"/>
 </joint>
 
-<joint name="kinect" type="fixed">
+<!--joint name="kinect" type="fixed">
   <origin rpy="0 0 0" xyz="-0.077181 -0.098326 0.004"/>
   <parent link="upper_plate_1"/>
   <child link="Kinect_v8_1"/>
+</joint-->
+<joint name="kinect2" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.1 -0.1 0.050303"/>
+  <parent link="base_link"/>
+  <child link="depth_camera_1"/>
 </joint>
 
 <joint name="Rigid19" type="fixed">
