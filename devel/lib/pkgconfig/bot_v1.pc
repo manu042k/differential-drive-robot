@@ -1,0 +1,8 @@
+prefix=/home/manoj/my_bot/devel
+
+Name: bot_v1
+Description: Description of bot_v1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

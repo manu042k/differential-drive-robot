@@ -1,2 +1,2 @@
-falcon_description
+bot_v1:falcon_description
 -DCATKIN_DEVEL_PREFIX=/home/manoj/my_bot/devel -DCMAKE_INSTALL_PREFIX=/home/manoj/my_bot/install -G Unix Makefiles

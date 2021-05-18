@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <robot name="falcon" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="left_wheel_joint_tran">
+<transmission name="Rev9_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="left_wheel_joint">
+  <joint name="Rev9">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="left_wheel_joint_actr">
+  <actuator name="Rev9_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="right_wheel_joint_tran">
+<transmission name="Rev10_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="right_wheel_joint">
+  <joint name="Rev10">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="right_wheel_joint_actr">
+  <actuator name="Rev10_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

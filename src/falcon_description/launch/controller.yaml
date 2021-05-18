@@ -5,11 +5,11 @@ falcon_controller:
     publish_rate: 50
 
   # Position Controllers --------------------------------------
-  left_wheel_joint_position_controller:
+  Rev9_position_controller:
     type: effort_controllers/JointPositionController
-    joint: left_wheel_joint
+    joint: Rev9
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  right_wheel_joint_position_controller:
+  Rev10_position_controller:
     type: effort_controllers/JointPositionController
-    joint: right_wheel_joint
+    joint: Rev10
     pid: {p: 100.0, i: 0.01, d: 10.0}

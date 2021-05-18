@@ -1,9 +1,11 @@
 <?xml version="1.0" ?>
 <launch>
   <param command="$(find xacro)/xacro $(find falcon_description)/urdf/falcon_v1.xacro " name="robot_description"/>
+<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
   <node args="-param robot_description -urdf -model falcon" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="true"/>
+    <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
