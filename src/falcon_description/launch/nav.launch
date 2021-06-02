@@ -1,0 +1,29 @@
+<launch>
+
+
+
+    <!--including the launch file with a navigation world-->
+    <include file="$(find falcon_description)/launch/my_world.launch" />
+    <!-- including launch file for localization using AMCL -->
+    <include file="$(find falcon_description)/launch/amcl.launch" />
+     <!-- including launch file for visualizing in rviz -->
+    <include file="$(find falcon_description)/launch/display.launch"/>
+    
+
+
+
+      <!-- Move base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+   <rosparam file="$(find falcon_description)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find falcon_description)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find falcon_description)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find falcon_description)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find falcon_description)/config/trajectory_planner.yaml" command="load" />
+
+
+    <param name="move_base/DWAPlannerROS/yaw_goal_tolerance" value="1.0"/>
+    <param name="move_base/DWAPlannerROS/xy_goal_tolerance" value="1.0"/>
+
+  </node>
+
+</launch>
