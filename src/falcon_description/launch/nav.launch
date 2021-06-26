@@ -1,6 +1,8 @@
 <launch>
 
-
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="move_forward_only" default="false"/>
 
     <!--including the launch file with a navigation world-->
     <include file="$(find falcon_description)/launch/my_world.launch" />
@@ -14,11 +16,12 @@
 
       <!-- Move base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-   <rosparam file="$(find falcon_description)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find falcon_description)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find falcon_description)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find falcon_description)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find falcon_description)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find falcon_description)/config/trajectory_planner.yaml" command="load" />
+    <rosparam file="$(find falcon_description)/config/move_base_params.yaml" command="load" />
+    <rosparam file="$(find falcon_description)/config/dwa_local_planner_params.yaml" command="load" />
 
 
     <param name="move_base/DWAPlannerROS/yaw_goal_tolerance" value="1.0"/>

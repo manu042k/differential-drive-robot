@@ -4,11 +4,12 @@
 <xacro:include filename="$(find falcon_description)/Gazebo/falcon_materials.gazebo" />
 <xacro:include filename="$(find falcon_description)/Gazebo/falcon_physics.gazebo" />
 <xacro:include filename="$(find falcon_description)/Gazebo/falcon_plugins.gazebo" />
+
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="-9.67857151412328e-16 -2.6593643350620014e-17 0.05230314967854302"/>
+    <origin rpy="0 0 0" xyz="-9.589753672153266e-16 -2.3777071441445284e-17 0.05230314967854302"/>
     <mass value="0.402909257822891"/>
-    <inertia ixx="0.002267" ixy="-0.0" ixz="0.0" iyy="0.002267" iyz="-0.0" izz="0.004533"/>
+    <inertia ixx="0.002267" ixy="-0.0" ixz="0.0" iyy="0.002267" iyz="0.0" izz="0.004533"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -27,9 +28,9 @@
 
 <link name="sd2_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.10499999999999905 -0.07700000000000001 0.04000014967854306"/>
+    <origin rpy="0 0 0" xyz="-0.10500000000000104 0.07699999999999982 0.0400001496785431"/>
     <mass value="0.05438639535766264"/>
-    <inertia ixx="2.9e-05" ixy="-0.0" ixz="-0.0" iyy="2.9e-05" iyz="-0.0" izz="1e-06"/>
+    <inertia ixx="2.9e-05" ixy="-0.0" ixz="0.0" iyy="2.9e-05" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -48,9 +49,9 @@
 
 <link name="sd4_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.10499999999999896 0.07499999999999998 0.04000014967854299"/>
+    <origin rpy="0 0 0" xyz="-0.10500000000000069 -0.07500000000000011 0.040000149678543005"/>
     <mass value="0.05438639535766264"/>
-    <inertia ixx="2.9e-05" ixy="-0.0" ixz="-0.0" iyy="2.9e-05" iyz="-0.0" izz="1e-06"/>
+    <inertia ixx="2.9e-05" ixy="-0.0" ixz="0.0" iyy="2.9e-05" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -69,9 +70,9 @@
 
 <link name="sd3_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.105000000000001 0.07499999999999998 0.040000149678543005"/>
+    <origin rpy="0 0 0" xyz="0.10499999999999914 -0.07499999999999987 0.04000014967854299"/>
     <mass value="0.05438639535766264"/>
-    <inertia ixx="2.9e-05" ixy="-0.0" ixz="0.0" iyy="2.9e-05" iyz="-0.0" izz="1e-06"/>
+    <inertia ixx="2.9e-05" ixy="-0.0" ixz="0.0" iyy="2.9e-05" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -90,9 +91,9 @@
 
 <link name="sd1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.10500000000000088 -0.07500000000000002 0.040000149678543116"/>
+    <origin rpy="0 0 0" xyz="0.10499999999999882 0.07500000000000005 0.04000014967854306"/>
     <mass value="0.05438639535766264"/>
-    <inertia ixx="2.9e-05" ixy="-0.0" ixz="-0.0" iyy="2.9e-05" iyz="-0.0" izz="1e-06"/>
+    <inertia ixx="2.9e-05" ixy="-0.0" ixz="-0.0" iyy="2.9e-05" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -111,19 +112,19 @@
 
 <link name="upper_plate_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.09832597061337654 -0.07718105902070528 0.0020001496785430617"/>
+    <origin rpy="0 0 0" xyz="-0.09832597061337846 0.07718105902070523 0.0020001496785430617"/>
     <mass value="0.4029092578228913"/>
-    <inertia ixx="0.002267" ixy="0.0" ixz="-0.0" iyy="0.002267" iyz="-0.0" izz="0.004533"/>
+    <inertia ixx="0.002267" ixy="0.0" ixz="0.0" iyy="0.002267" iyz="0.0" izz="0.004533"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.10017 -0.076294 -0.134303"/>
+    <origin rpy="0 0 0" xyz="-0.10017 0.076294 -0.134303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/upper_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver_default"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.10017 -0.076294 -0.134303"/>
+    <origin rpy="0 0 0" xyz="-0.10017 0.076294 -0.134303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/upper_plate_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -132,9 +133,9 @@
 
 <link name="Arduino_uno.6df525b0-a0fc-4683-8e1a-4d70c617ad71_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.03155432138817296 0.00713228233557432 0.005306319016284623"/>
+    <origin rpy="0 0 0" xyz="0.031554321388171054 -0.007132282335574328 0.0053063190162845955"/>
     <mass value="0.057955713973018276"/>
-    <inertia ixx="2.7e-05" ixy="-3e-06" ixz="-0.0" iyy="1.7e-05" iyz="-1e-06" izz="4.3e-05"/>
+    <inertia ixx="2.7e-05" ixy="-3e-06" ixz="0.0" iyy="1.7e-05" iyz="1e-06" izz="4.3e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -153,19 +154,19 @@
 
 <link name="wheels_v2_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-8.15466474443638e-07 -0.017807485643427656 3.8670790783457143e-07"/>
+    <origin rpy="0 0 0" xyz="8.154664722231919e-07 0.017807485643427545 3.867079077582436e-07"/>
     <mass value="0.18220368816055363"/>
-    <inertia ixx="6.7e-05" ixy="0.0" ixz="-0.0" iyy="0.000121" iyz="-0.0" izz="6.7e-05"/>
+    <inertia ixx="6.7e-05" ixy="0.0" ixz="0.0" iyy="0.000121" iyz="0.0" izz="6.7e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0835 0.1525 -0.038122"/>
+    <origin rpy="0 0 0" xyz="-0.0835 -0.1525 -0.038122"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/wheels_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver_default"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.0835 0.1525 -0.038122"/>
+    <origin rpy="0 0 0" xyz="-0.0835 -0.1525 -0.038122"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/wheels_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -174,19 +175,19 @@
 
 <link name="wheels_v2_2">
   <inertial>
-    <origin rpy="0 0 0" xyz="-8.154664748460938e-07 0.017807485643427545 3.8670789302003294e-07"/>
+    <origin rpy="0 0 0" xyz="8.154664730974925e-07 -0.017807485643427573 3.867078929645218e-07"/>
     <mass value="0.18220368816055363"/>
-    <inertia ixx="6.7e-05" ixy="-0.0" ixz="0.0" iyy="0.000121" iyz="-0.0" izz="6.7e-05"/>
+    <inertia ixx="6.7e-05" ixy="-0.0" ixz="-0.0" iyy="0.000121" iyz="0.0" izz="6.7e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0837 -0.1525 -0.038122"/>
+    <origin rpy="0 0 0" xyz="-0.0837 0.1525 -0.038122"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/wheels_v2_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver_default"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.0837 -0.1525 -0.038122"/>
+    <origin rpy="0 0 0" xyz="-0.0837 0.1525 -0.038122"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/wheels_v2_2.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -195,9 +196,9 @@
 
 <link name="motor_left_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.08350000000000087 -0.10628292124886941 -0.012180613292093606"/>
+    <origin rpy="0 0 0" xyz="0.08349999999999877 0.10628292124886936 -0.012180613292093669"/>
     <mass value="0.252461303560872"/>
-    <inertia ixx="0.000164" ixy="-0.0" ixz="0.0" iyy="1.7e-05" iyz="0.0" izz="0.000166"/>
+    <inertia ixx="0.000164" ixy="-0.0" ixz="-0.0" iyy="1.7e-05" iyz="-0.0" izz="0.000166"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.050303"/>
@@ -216,9 +217,9 @@
 
 <link name="motor_right_v1_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.0837000000000012 0.10628292124886932 -0.016180613292093818"/>
+    <origin rpy="0 0 0" xyz="0.08369999999999933 -0.10628292124886923 -0.016180613292093887"/>
     <mass value="0.252461303560872"/>
-    <inertia ixx="0.000164" ixy="0.0" ixz="0.0" iyy="1.7e-05" iyz="-0.0" izz="0.000166"/>
+    <inertia ixx="0.000164" ixy="0.0" ixz="-0.0" iyy="1.7e-05" iyz="0.0" izz="0.000166"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -237,9 +238,9 @@
 
 <link name="Raspberry-Pi-4-Model-B-03_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.04903732841291807 0.015143940045604574 0.00544862297481357"/>
+    <origin rpy="0 0 0" xyz="-0.04903732841292007 -0.01514394004560468 0.005448622974813529"/>
     <mass value="0.11046204859047104"/>
-    <inertia ixx="7.4e-05" ixy="-2e-06" ixz="-0.0" iyy="3.3e-05" iyz="-7e-06" izz="0.000102"/>
+    <inertia ixx="7.4e-05" ixy="-2e-06" ixz="0.0" iyy="3.3e-05" iyz="7e-06" izz="0.000102"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -258,9 +259,9 @@
 
 <link name="l298n__v12_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.09124354847663095 0.00164655591312931 0.008981004617545911"/>
+    <origin rpy="0 0 0" xyz="0.09124354847662892 -0.0016465559131292565 0.008981004617545897"/>
     <mass value="0.07894628453414008"/>
-    <inertia ixx="1.7e-05" ixy="-1e-06" ixz="0.0" iyy="1.3e-05" iyz="-3e-06" izz="2.2e-05"/>
+    <inertia ixx="1.7e-05" ixy="-1e-06" ixz="-0.0" iyy="1.3e-05" iyz="3e-06" izz="2.2e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -279,9 +280,9 @@
 
 <link name="power_bank.f96af03a-0fb2-4191-ac78-a015be66eb68_v2_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.012572936969995589 0.000265889694991782 -0.012493581581072576"/>
+    <origin rpy="0 0 0" xyz="0.012572936969993662 -0.00026588969499183974 -0.012493581581072603"/>
     <mass value="0.5416823843699559"/>
-    <inertia ixx="0.000242" ixy="-1e-06" ixz="0.0" iyy="0.000122" iyz="0.0" izz="0.000313"/>
+    <inertia ixx="0.000242" ixy="-1e-06" ixz="-0.0" iyy="0.000122" iyz="-0.0" izz="0.000313"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.050303"/>
@@ -300,9 +301,9 @@
 
 <link name="MODULO_XL4016_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.003496342778758418 0.10000457758500424 0.009725545612401819"/>
+    <origin rpy="0 0 0" xyz="-0.0034963427787602147 -0.10000457758500429 0.009725545612401791"/>
     <mass value="0.162841989737334"/>
-    <inertia ixx="2.9e-05" ixy="0.0" ixz="-2e-06" iyy="4.9e-05" iyz="0.0" izz="6.5e-05"/>
+    <inertia ixx="2.9e-05" ixy="0.0" ixz="2e-06" iyy="4.9e-05" iyz="-0.0" izz="6.5e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -321,9 +322,9 @@
 
 <link name="GY-91_MPU9250+BMP280_-_Pins_Down__1__v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.0008173970150823031 -0.10039875418246057 0.0010166475259210106"/>
+    <origin rpy="0 0 0" xyz="0.0008173970150802841 0.10039875418246041 0.0010166475259210106"/>
     <mass value="0.004104865550111833"/>
-    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.054303"/>
@@ -342,9 +343,9 @@
 
 <link name="caster_2">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.11999999999999904 1.2005651613934594e-17 -0.022638739210345857"/>
+    <origin rpy="0 0 0" xyz="-0.12000000000000091 -2.098317104738746e-16 -0.022638739210345833"/>
     <mass value="0.24969771109813355"/>
-    <inertia ixx="5.7e-05" ixy="-0.0" ixz="-0.0" iyy="5.7e-05" iyz="-0.0" izz="2.7e-05"/>
+    <inertia ixx="5.7e-05" ixy="-0.0" ixz="0.0" iyy="5.7e-05" iyz="0.0" izz="2.7e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.050303"/>
@@ -363,19 +364,19 @@
 
 <link name="lidar_v1_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.049578486108768874 0.005044839637171208 0.03526833392576614"/>
+    <origin rpy="0 0 0" xyz="0.08375644266188363 -0.0003761385625155475 0.03526833392576614"/>
     <mass value="1.3392964352221826"/>
-    <inertia ixx="0.000619" ixy="-1e-06" ixz="-0.000159" iyy="0.000967" iyz="3e-06" izz="0.001105"/>
+    <inertia ixx="0.000619" ixy="-1e-06" ixz="0.000159" iyy="0.000967" iyz="-3e-06" izz="0.001105"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.001844 0.000887 -0.138303"/>
+    <origin rpy="0 0 0" xyz="-0.001844 -0.000887 -0.138303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver_default"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.001844 0.000887 -0.138303"/>
+    <origin rpy="0 0 0" xyz="-0.001844 -0.000887 -0.138303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/lidar_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -384,29 +385,24 @@
 
 <link name="camera_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.1312482542175321 -0.001066853735353874 -0.026945495496267832"/>
+    <origin rpy="0 0 0" xyz="0.12367569989438572 0.0020805696443356256 -0.026945495496267652"/>
     <mass value="0.0465939448735046"/>
-    <inertia ixx="1.5e-05" ixy="-0.0" ixz="0.0" iyy="8e-06" iyz="0.0" izz="8e-06"/>
+    <inertia ixx="1.5e-05" ixy="-1e-06" ixz="0.0" iyy="8e-06" iyz="0.0" izz="8e-06"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.001844 0.000887 -0.138303"/>
+    <origin rpy="0 0 0" xyz="-0.001844 -0.000887 -0.134303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver_default"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.001844 0.000887 -0.138303"/>
+    <origin rpy="0 0 0" xyz="-0.001844 -0.000887 -0.134303"/>
     <geometry>
       <mesh filename="package://falcon_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-
-
-
-
-
 
 <joint name="Rigid1" type="fixed">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.054303"/>
@@ -433,7 +429,7 @@
 </joint>
 
 <joint name="Rigid5" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.10017 0.076294 0.08"/>
+  <origin rpy="0 0 0" xyz="0.10017 -0.076294 0.08"/>
   <parent link="sd3_1"/>
   <child link="upper_plate_1"/>
 </joint>
@@ -445,14 +441,14 @@
 </joint>
 
 <joint name="Rev9" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.0835 -0.1525 -0.012181"/>
+  <origin rpy="0 0 0" xyz="0.0835 0.1525 -0.012181"/>
   <parent link="motor_left_v1_1"/>
   <child link="wheels_v2_1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Rev10" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.0837 0.1525 -0.016181"/>
+  <origin rpy="0 0 0" xyz="0.0837 -0.1525 -0.016181"/>
   <parent link="motor_right_v1_v1_1"/>
   <child link="wheels_v2_2"/>
   <axis xyz="0.0 1.0 0.0"/>
@@ -507,13 +503,13 @@
 </joint>
 
 <joint name="Rigid24" type="fixed">
-  <origin rpy="0 0 0" xyz="0.098326 -0.077181 0.004"/>
+  <origin rpy="0 0 0" xyz="-0.098326 0.077181 0.004"/>
   <parent link="upper_plate_1"/>
   <child link="lidar_v1_1"/>
 </joint>
 
-<joint name="Rigid25" type="fixed">
-  <origin rpy="0 0 0" xyz="0.098326 -0.077181 0.004"/>
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.098326 0.077181 0.0"/>
   <parent link="upper_plate_1"/>
   <child link="camera_1"/>
 </joint>
