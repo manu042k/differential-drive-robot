@@ -3,6 +3,7 @@
 
      <include file="$(find falcon_description)/launch/my_world.launch" />
      <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
-
+     <include file="$(find falcon_description)/launch/amcl.launch" />
+     <include file="$(find falcon_description)/launch/display.launch" />
     <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen"/>
 </launch>

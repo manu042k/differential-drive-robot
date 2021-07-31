@@ -1,2 +1,2 @@
-falcon_description
--DCATKIN_DEVEL_PREFIX=/home/manoj/my_bot/devel -DCMAKE_INSTALL_PREFIX=/home/manoj/my_bot/install -G Unix Makefiles
+darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs:falcon_description
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/manoj/my_bot/devel -DCMAKE_INSTALL_PREFIX=/home/manoj/my_bot/install -G Unix Makefiles

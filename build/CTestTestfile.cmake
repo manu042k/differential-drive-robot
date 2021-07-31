@@ -6,3 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("falcon_description")
+subdirs("darknet_ros/darknet_ros_msgs")
+subdirs("darknet_ros/darknet_ros")

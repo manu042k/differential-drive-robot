@@ -6,6 +6,7 @@
  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
@@ -42,6 +43,27 @@
       move(1, 0);
     });
   
+    var pose = new ROSLIB.Topic({
+      ros: ros,
+      name: '/amcl_pose',
+      messageType: 'geometry_msgs/PoseWithCovarianceStamped' 
+    });
+    pose.subscribe(function(data){
+      console.log('data: ', data.pose.pose.position.x.toFixed(2));
+      document.getElementById("px").innerHTML = data.pose.pose.position.x.toFixed(3);
+      document.getElementById("py").innerHTML = data.pose.pose.position.y.toFixed(3);
+    });
+
+    var odomo = new ROSLIB.Topic({
+      ros: ros,
+      name: '/odom',
+      messageType: 'nav_msgs/Odometry'
+    });
+
+    odomo.subscribe(function(odo_data){
+      document.getElementById("lx").innerHTML = odo_data.twist.twist.linear.x.toFixed(3);
+      document.getElementById("az").innerHTML = odo_data.twist.twist.angular.z.toFixed(3);
+    });
     cmd_vel_listener = new ROSLIB.Topic({
       ros: ros,
       name: "/cmd_vel",
@@ -105,16 +127,17 @@
 
     window.onload = function () {
       createJoystick();
-      robot_IP= '0.0.0.0';              //'0.0.0.0';
+      robot_IP=  '192.168.43.74'            //'0.0.0.0';              //'0.0.0.0';
     video = document.getElementById('video');
     // Populate video source 
-    video.src = "http://" + robot_IP + ":8080/stream?topic=/camera1/image_raw";
-  
+    video.src = "http://" + robot_IP + ":8080/stream?topic=camera1/image_raw";             ///camera/rgb/image_color";           
+    
     }
     
   </script>
 </head>
 
+  
 <body>
     <nav class="navbar navbar-inverse">
 
@@ -126,14 +149,51 @@
         <p>Last message on /txt_msg: <span id="msg"></span></p>
     </div>
 
+    <div class="wrapper">
    
-    <div class="row">
-      <div class="col-sm-2" id="zone_joystick" style="margin-top: 200px; margin-left: 200px;margin-right: 200px;"></div>
-      <div class="col-sm-4" style="background-color:lavenderblush;">
-        <img src="" class="p-1 bg-dark" alt="" id="video"  style="width: 600px; height: 400px; "/>
+    <section class="columns">
+      
+      <div class="column" >
+        <h2>Video Feed</h2>
+        <img src="" class="p-1 bg-dark" alt="" id="video"  style="width: 100%; height: 400px; "/>
+      
+       
       </div>
       
+      <div class="column">
+        <h2>Joystick</h2>
+        <div id="zone_joystick" style="margin-top: 200px; height: 200px;"></div> 
+      </div>
+      
+      <div class="column">
+        <h2>Data</h2>
+        <h4>x:<span id="px"></span></h4>
+        <h4>y:<span id="py"></span></h4>
+        <h4>Linear velocity:<span id="lx"></span></h4>
+        <h4>Angular velocity:<span id="az"></span></h4>
+
+      </div>
+      
+    </section>	
+      
+    <nav class="navbar navbar-inverse">
+
+    </nav>
+    
     </div>
+
+    <!--div class="row">
+      <div class="col-sm-2" id="zone_joystick" style="margin-top: 200px; margin-left: 200px;margin-right: 200px;"></div>
+      <div class="col-sm-2" style="background-color:lavenderblush;">
+        <img src="" class="p-1 bg-dark" alt="" id="video"  style="width: 600px; height: 400px; "/>
+      </div>
+      <div class="col-sm-2" style="width: 200px; height: 400px; margin-left: 200px">
+        <p>x:<span id="px"></span></p>
+        <p>y:<span id="py"></span></p>
+        
+      </div>
+      
+    </div-->
    
    
    
